@@ -62,6 +62,13 @@
     <snakeyaml.version>2.2</snakeyaml.version>
     <commons-collections.version>3.2.2</commons-collections.version>
     <commons-collections4.version>4.4</commons-collections4.version>
+    <httpcore.version>4.4.16</httpcore.version>
+    <httpclient.version>4.5.14</httpclient.version>
+    <httpclient-cache.version>4.5.14</httpclient-cache.version>
+    <httpmime.version>4.5.14</httpmime.version>
+    <httpcore5.version>5.2.1</httpcore5.version>
+    <httpclient5.version>5.2.1</httpclient5.version>
+    <httpclient5-cache.version>5.2.1</httpclient5-cache.version>
   </properties>
 
   <modules>
@@ -254,6 +261,41 @@
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-collections4</artifactId>
         <version>${commons-collections4.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpcore</artifactId>
+        <version>${httpcore.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>${httpclient.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient-cache</artifactId>
+        <version>${httpclient-cache.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpmime</artifactId>
+        <version>${httpmime.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents.core5</groupId>
+        <artifactId>httpcore5</artifactId>
+        <version>${httpcore5.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents.client5</groupId>
+        <artifactId>httpclient5</artifactId>
+        <version>${httpclient5.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents.client5</groupId>
+        <artifactId>httpclient5-cache</artifactId>
+        <version>${httpclient5-cache.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
