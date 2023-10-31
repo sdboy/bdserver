@@ -2,12 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.1.5</version>
-    <relativePath/> <!-- lookup parent from repository -->
-  </parent>
+
   <groupId>net.eyeb</groupId>
   <artifactId>bdserver</artifactId>
   <packaging>pom</packaging>
@@ -23,7 +18,8 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
 
-    <spring-cloud.version>2022.0.4</spring-cloud.version>
+    <spring-boot-dependencies.version>3.1.5</spring-boot-dependencies.version>
+    <spring-cloud-dependencies.version>2022.0.4</spring-cloud-dependencies.version>
 
     <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
     <javax.servlet.jsp-api.version>2.3.3</javax.servlet.jsp-api.version>
@@ -49,9 +45,10 @@
     <spring-modulith-bom.version>1.0.2</spring-modulith-bom.version>
     <spring-modulith-starter-core.version>1.0.2</spring-modulith-starter-core.version>
 
+    <bdserver-commons-service.verion>0.0.1-SNAPSHOT</bdserver-commons-service.verion>
     <bdserver-authentication-service.version>0.0.1-SNAPSHOT</bdserver-authentication-service.version>
     <bdserver-authorization-service.version>0.0.1-SNAPSHOT</bdserver-authorization-service.version>
-    <bdserver-commons-service.verion>0.0.1-SNAPSHOT</bdserver-commons-service.verion>
+    <bdserver-message-service.verion>0.0.1-SNAPSHOT</bdserver-message-service.verion>
     <bdserver-user-service.version>0.0.1-SNAPSHOT</bdserver-user-service.version>
     <bdserver-downlink-service.version>0.0.1-SNAPSHOT</bdserver-downlink-service.version>
     <bdserver-address-service.version>0.0.1-SNAPSHOT</bdserver-address-service.version>
@@ -72,9 +69,10 @@
   </properties>
 
   <modules>
+    <module>commons-service</module>
     <module>authentication-service</module>
     <module>authorization-service</module>
-    <module>commons-service</module>
+    <module>message-service</module>
     <module>user-service</module>
     <module>downlink-service</module>
     <module>address-service</module>
@@ -164,9 +162,16 @@
         <version>${bdserver-address-service.version}</version>
       </dependency>
       <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot-dependencies.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
-        <version>${spring-cloud.version}</version>
+        <version>${spring-cloud-dependencies.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
